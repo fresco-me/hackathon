@@ -1,0 +1,13 @@
+-- Replicaset
+
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod1
+  labels:
+    tier: frontend
+spec:
+  containers:
+  - name: hello1
+    image: gcr.io/google-samples/hello-app:2.0
