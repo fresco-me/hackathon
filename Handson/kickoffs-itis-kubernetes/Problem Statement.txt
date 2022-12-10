@@ -1,0 +1,23 @@
+Kickoffs - Web Application Deployment using Kubernetes
+------------------------------------------------------
+
+- Minikube is already installed in the environment.
+
+- Start Minikube and run the following commands to sync host docker with minikube docker
+    $ minikube -p minikube docker-env 
+    $ eval $(minikube docker-env)
+
+Getting started with the challenge,
+
+- A homepage.html file is given in the path ~/Desktop/Project/kickoffs-itis-kubernetes
+- Dockerize the given static html page into an image named 'homepage' which uses 'nginx' as base image.
+- Create a Kubernetes deployment object named 'homepage-deployment' with 2 replicas which deploys the dockerized
+homepage of an application on a container named 'web-homepage'. Add a label 'webapp' to the deployment object.
+- Create a NodePort service named 'web-service' which exposes the deployment object on port 30112.
+- Finally, check whether the application has been deployed and exposed on the specified NodePort.
+
+
+Note:
+- K8s deployment object should be created using 'homepage_deployment.yaml' file 
+- K8s service should be created using 'web_service.yaml' file 
+- Dockerfile, homepage_deployment.yaml and web_service.yaml should be present in the path ~/Desktop/Project/kickoffs-itis-kubernetes

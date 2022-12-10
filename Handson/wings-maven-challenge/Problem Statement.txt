@@ -1,0 +1,23 @@
+Alice is trying to solve two maven based challenges. Help Alice to complete the challenges as stated below
+Challenge1
+-----------
+- This maven challenge is based on 3 maven modules named business, data and service.
+(Note: Do not make any changes to the pre-existing structure of all the pom.xml files. There are some pre-defined java files in all the 3 modules and ensure that they are error-free by configuring respective pom.xml files as stated below)
+1)Configure the parent pom of all the listed 3 modules
+
+2)Configure the pom.xml file present in data folder such that it depends on business module and parent as root pom
+
+3)Configure the pom.xml file present in business folder such that it depends on service module and parent as root pom
+
+4)Configure the pom.xml file present in service folder such that it's parent is root pom
+
+Challenge2
+-----------
+1. The scenario is based on configuring Parent and Child POM files such that child POM should be able to inherit all the required dependencies from Parent POM.
+
+2. Configure ParentPOM to generate surefire report and checkstyle report
+
+3. Configure ChildPOM to inherit all the dependencies/plugins from pom.xml in ParentPOM directory 
+
+Note: No dependencies/plugins to be added in child pom.xml
+

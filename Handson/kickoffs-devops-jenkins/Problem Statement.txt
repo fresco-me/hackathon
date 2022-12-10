@@ -1,0 +1,18 @@
+Configure Jenkins to build a Java application
+---------------------------------------------------------
+Your team is planning to use Jenkins Pipelines for their next project to build and test project code.
+However, they are concerned about its Continuous Integration and Continuous Deployment feature.
+As a DevOps engineer, you are going to demonstrate to the team about the features and performance of a 
+Jenkins Environment by creating a pipeline named JenkinsDemo that clones a java project from the git 
+repository and execute the Java application.
+
+Note:
+- Username for jenkins : admin
+- Password : fetch it from /var/lib/jenkins/secrets/initialAdminPassword
+- Do not make any change in the maven application.
+- Git repository: https://code.fresco.me/Hackathon/dtd-hackathons/kickoffs-jenkins-challenge.git
+- Username: handson_user
+- Password: glpat-7B41mSkUdsDJAUDMxibs
+- Build Command: javac JenkinsDemo.java
+                 java JenkinsDemo
+

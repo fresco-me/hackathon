@@ -1,0 +1,9 @@
+Kickoffs - Docker Challenge
+-------------------------------------------------------------------------------------------------------
+
+In this challenge, your are going to perform the following tasks:
+
+1. Create a Dockerfile in the path "~/Desktop/Project/kickoffs-itis-docker". 
+2. Add a build step to dockerize the given Flask application with python alpine3.7 as its base image 
+   named "flask_app_image" and deploy it on a container named "flask_app_container" and expose in port 5005.
+3. Check the application deployment by hitting the URL "http://localhost:5005/"
