@@ -1,0 +1,36 @@
+- name: install apache and php support packages
+  tags: apache,httpd, php
+  package:
+    name:
+      - "{{ apache_package_name }}"
+      - "{{ php_package_name }}"
+    state: latest
+
+
+- name: start and enable apache service
+  tags: apache, httpd
+  service:
+    name: "{{ apache_service }}"
+    state: started
+    enabled: yes
+
+
+- name: change e-mail address for admin
+  tags: apache, httpd
+  lineinfile: 
+    path: /etc/apache2/apache2.conf
+    regexp: "# * This is"
+    line: "# * This is the new root server admin's email root@localhost.com.ng"
+  when: (ansible_distribution == "Kali") or (ansible_os_family == "Debian")
+  notify: restart_apache
+
+
+- name: copy default html file for site
+  tags: apache,apache2,httpd
+  copy:
+    src: default_site.html
+    dest: /var/www/html/index.html
+    owner: root
+    group: root
+    mode: 0644
+
