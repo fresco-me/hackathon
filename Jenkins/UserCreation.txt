@@ -1,0 +1,16 @@
+Before storing the credentials in jenkins, create a user in Tomcat with manager-script role.
+
+To create users in Tomcat, open the file /var/lib/tomcat9/conf/tomcat-users.xml
+
+> sudo vi /var/lib/tomcat9/conf/tomcat-users.xml
+
+Go to end of the file and paste the following lines inside tomcat-users block and save it.
+
+  <role rolename="manager-script"/>
+  <user username="deployer" password="deployer" roles="manager-script"/>
+
+Here we have defined one role manager-script and created one user deployer and assigned the manager-script role to the deployer user.
+
+Then restart the tomcat9
+
+> sudo systemctl restart tomcat9
